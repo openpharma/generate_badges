@@ -400,6 +400,16 @@
       ],
       "Hash": "7ce2733a9826b3aeb1775d56fd305472"
     },
+    "nanoparquet": {
+      "Package": "nanoparquet",
+      "Version": "0.3.1",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Requirements": [
+        "R"
+      ],
+      "Hash": "a2a0a0dc4cd6bd52d501c619c77cc321"
+    },
     "openssl": {
       "Package": "openssl",
       "Version": "2.2.2",

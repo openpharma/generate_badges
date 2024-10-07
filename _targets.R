@@ -39,5 +39,9 @@ list(
       cran_data = cran,
       github_data = github
     )
+  ),
+  tar_target(
+    name = saved_data,
+    command = write_data(badge_data)
   )
 )
