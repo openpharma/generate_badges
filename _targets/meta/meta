@@ -1,0 +1,11 @@
+name|type|data|command|depend|seed|path|time|size|bytes|format|repository|iteration|parent|children|seconds|warnings|error
+make_shield|function|098e3507b1220bcd
+.Random.seed|object|3398db0202c7e036
+get_cran|function|9f7d1fcd8623a489
+get_github|function|59917af1891f991a
+get_pharmaverse_pkgs|function|43992c3d0b75ea3a
+create_badge_data|function|3ae6b041cf65be6a
+pkgs|stem|229d2bb56704fa2c|a9a796ab62cafa65|e0921427e9f0487a|-619172611||t20003.6447459855s|adbe515c3bc20c4a|3297|qs|local|vector|||4.763||
+cran|stem|583bcc38b9a65801|b4b28907935676dd|6b13f7320d039bea|-294049529||t20003.6447530732s|e0ad82c725147e35|23546|qs|local|vector|||0.593||
+github|stem|fd1d591fe4eaf184|f541a02a24bc3864|58f277d54dda9b02|-1347473391||t20003.6455611902s|2993a6751eb0e099|5750|qs|local|vector|||69.816||
+badge_data|stem|6c1b6708233c21ec|0d5415945e3872a9|ec0b89de0db3212d|1909416717||t20003.6455614583s|70a51f0414697d22|1853|qs|local|vector|||0.017||
