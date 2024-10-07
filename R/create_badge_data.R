@@ -1,5 +1,5 @@
 create_badge_data <- function(
-  pharmaverse_pkgs
+  pharmaverse_pkgs,
   cran_data,
   github_data 
 ){
