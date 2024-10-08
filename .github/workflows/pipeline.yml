@@ -56,8 +56,8 @@ jobs:
         run: |
           targets::tar_make()
 
-      - name: Render doc
-        run: quarto render index.qmd
+      #- name: Render doc
+      #  run: quarto render index.qmd
 
       - name: Checkout gh-pages branch
         uses: actions/checkout@v3
@@ -65,10 +65,9 @@ jobs:
           ref: gh-pages
           path: gh-pages
 
-      - name: Copy output and rename README.html to index.html
+     # mv index.html gh-pages/index.html
+      - name: Copy output 
         run: |
-          cp -R output/* gh-pages/
-          mv index.html gh-pages/index.html
           mv output/* gh-pages/output/
 
       - name: Commit and push changes
