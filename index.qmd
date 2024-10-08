@@ -1,0 +1,43 @@
+---
+title: "Generate badges"
+format: 
+  html:
+    self-contained: true
+---
+
+
+# data-pipelines
+
+## Structure
+
+* Code: [openpharma/generate_badges](https://github.com/openpharma/generate_badges)
+* Rendered run: [rinpharma.github.io/data-pipelines/](https://openpharma.github.io/generate_badges/)
+* Output: Direct links below. Stored in gh-pages branch
+
+## Rebuilding
+
+This data (and this page) rebuild automatically based on the [CRON schedule specified in the github action](https://github.com/openpharma/generate_badges/blob/main/.github/workflows/pipeline.yml#L5).
+
+Run the pipeline with `targets::tar_make()`
+
+Check the pipeline with `targets::tar_manifest(fields = all_of("command"))`
+
+Visualise the pipeline with `targets::tar_visnetwork()`
+
+```{r, results = "asis", echo = FALSE, warnings = FALSE}
+cat(c("```{mermaid}", targets::tar_mermaid(), "```"), sep = "\n")
+```
+
+## Output
+
+The current files are available
+
+* [data.parquet](output/data.parquet)
+
+```{r}
+arrow::read_parquet(
+  "https://openpharma.github.io/generate_badges/output/data.parquet"
+  ) |>
+  dplyr::glimpse()
+```
+
