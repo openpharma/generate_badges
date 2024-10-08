@@ -68,6 +68,7 @@ jobs:
      # mv index.html gh-pages/index.html
       - name: Copy output 
         run: |
+          mkdir gh-pages/output/
           mv output/* gh-pages/output/
 
       - name: Commit and push changes
