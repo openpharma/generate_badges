@@ -54,8 +54,7 @@ create_badge_data <- function(
 
 # Helper
 make_shield <- function(label, value, colour, url) {
-  shield <- glue::glue("![](https://img.shields.io/badge/{label}-{value}-{colour}.svg)")
-  as.character(glue::glue("[{shield}]({url})"))
+  as.character(glue::glue("<img src='https://img.shields.io/badge/{label}-{value}-{colour}.svg' alt='cran shield'>"))
 }
 
 
