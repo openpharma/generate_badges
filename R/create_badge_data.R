@@ -20,28 +20,11 @@ create_badge_data <- function(
     ) |>
     dplyr::mutate(
   # CRAN ---------------------------
-      badge_cran = make_shield(
-        label = "CRAN",
-        value = Version,
-        colour = "blue",
-        url = glue::glue(
-          "https://cran.r-project.org/web/packages/{name}/index.html"
-        )
-      ),
+      badge_cran = Version,
   # Contributors ---------------------------
-      badge_contributors = make_shield(
-        label = "Code contributors",
-        value = contributors_n,
-        colour = "green",
-        url = repo_url
-      ),
+      badge_contributors = contributors_n,
   # GH stars ---------------------------
-      badge_stars = make_shield(
-        label = "Github stars",
-        value = stars,
-        colour = "purple",
-        url = repo_url
-      )
+      badge_stars = stars
     ) |>
     dplyr::select(
       name, 
@@ -50,11 +33,6 @@ create_badge_data <- function(
     )
   
   
-}
-
-# Helper
-make_shield <- function(label, value, colour, url) {
-  as.character(glue::glue("<img src='https://img.shields.io/badge/{label}-{value}-{colour}.svg' alt='cran shield'>"))
 }
 
 
